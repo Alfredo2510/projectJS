@@ -1,12 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<title>iScore</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/et-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/tooltip.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="css/Chart.css">
+	<link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
 </head>
-<body>
-    <h1>prject JS</h1>
+
+<body>	
+	<div id="wrapper" class="behind">
+		<header>
+			<div class="container">
+					<div class="col-md-6 col-sm-12 wow animated fadeInUp">
+						<div class="intro-book">
+							<img src="img/banner.png" alt="">
+						</div>
+					</div>
+					<div class="col-md-6 intro-text hidden-sm hidden-xs wow animated fadeInUp">
+						<h2 class="heading">iScore es un sitio para mostrar resultados académicos de manera gráfica y sencilla.</h2>
+						<p></p>
+						<a href="#book" class="scrollto btn btn-white">Más de iScore</a>
+						<a href="#contact" class="btn btn-green">Registra un nuevo Alumno</a>
+					</div>
+			</div>
+		</header>
+
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="img/logofeo.png" alt=""></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right main-nav">
+						<li><a href="#book" class="scrollto">iScore</a></li>
+						<li><a href="#results" class="scrollto">Resultados</a></li>
+						<!-- <li><a href="#author" class="scrollto">Author</a></li> -->
+						<!-- <li><a href="#contact" class="scrollto">Añadir</a></li> -->
+						<li><a href="#contact" class="btn btn-green">Añadir Calificación</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+		<section id="book">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="book-preview">
+							<img src="img/kindle.png" class="background-device" alt="">
+							<div class="owl-book">
+								<div class="item">
+									<img src="img/1.png" alt="">
+									<div class="overlay">
+										<a href="img/1.png" class="expand" data-lightbox="book-collection" data-title="Ampliar Imagen"><i class="fa fa-expand"></i></a>
+									</div>
+								</div>
+								<div class="item">
+									<img src="img/2.png" alt="">
+									<div class="overlay">
+										<a href="img/2.png" class="expand" data-lightbox="book-collection" data-title="Ampliar Imagen"><i class="fa fa-expand"></i></a>
+									</div>
+								</div>
+								<div class="item">
+									<img src="img/3.png" alt="">
+									<div class="overlay">
+										<a href="img/3.png" class="expand" data-lightbox="book-collection" data-title="Ampliar Imagen"><i class="fa fa-expand"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<h2 class="heading wow animated fadeInUp">Acerca de iScore</h2>
+						<h4 class="subheading wow animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde ea id officia tempora quidem delenit.</h4>
+						<p class="small wow animated fadeInUp">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde ea id officia tempora quidem delenit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde ea id officia tempora quidem delenit. </p>
+						<p class="small wow animated fadeInUp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde ea id officia tempora quidem delenit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum unde ea id officia tempora quidem delenit.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="call-to-action">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center wow animated fadeInUp">
+						<p class="white">Con Gráficos de JavaScript simples pero flexibles para diseñadores y desarrolladores con <b>Chart.js</b></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="results" class="results">
+			<canvas id="myChart" width="400" height="250"></canvas>
+		</section>
+
+		<section class="call-to-action">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 text-left text-center-mobile wow animated fadeInUp">
+						<h2 class="heading white top-fit">iScore Te muestra los Mejores Resultados</h2>
+						<h4 class="subheading white no-margin">Miles de Profesores lo Utilizan.</h4>
+					</div>
+					<div class="col-md-4 text-right wow animated fadeInUp text-center-mobile">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 text-left text-center-mobile wow animated fadeInUp contact-details">
+						<h3 class="heading no-margin wow animated fadeInUp">Añadir Calificaciones</h3>
+						<h4 class="subheading muted no-margin wow animated fadeInUp">Solo hay que insertar Datos y elegir un Color de Identificador.</h4>
+						<div class="details">
+							<h6 class="heading no-margin">Graficación y Multimedia</h6>
+							<p class="small muted wow animated fadeInUp no-margin">ISW <br>
+							8°B, UNIPOLI</p>
+						</div>
+					</div>
+					<!-- <form action="php/newMail.php" method="post" class="mail-form"> -->
+					<form method="post" class="mail-form">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-sm-12">
+									<input name="firstname" id="firstname" type="text" class="form-control" placeholder="Nombre y Apellido" data-validation="required">
+								</div>
+								<!-- <div class="col-sm-6">
+									<input name="email" type="text" class="form-control" placeholder="Email" data-validation="email">
+								</div> -->
+							</div>
+
+							<div class="row">
+								<div class="col-sm-3">
+									<input name="grades" list="grades" id="grade1" type="text" class="form-control" placeholder="Unidad 1" data-validation="required">
+								</div>
+								<div class="col-sm-3">
+									<input name="grades" list="grades" id="grade2" type="text" class="form-control" placeholder="Unidad 2" data-validation="required">
+								</div>
+								<div class="col-sm-3">
+									<input name="grades" list="grades" id="grade3" type="text" class="form-control" placeholder="Unidad 3" data-validation="required">
+								</div>
+								<div class="col-sm-3">
+									<input name="grades" list="grades" id="grade4" type="text" class="form-control" placeholder="Unidad 4" data-validation="required">
+								</div>
+							</div>
+
+							<datalist id="grades">
+								<option value="0">0</option>
+								<option value="10">10</option>
+								<option value="20">20</option>
+								<option value="30">30</option>
+								<option value="40">40</option>
+								<option value="50">50</option>
+								<option value="60">60</option>
+								<option value="70">70</option>
+								<option value="80">80</option>
+								<option value="90">90</option>
+								<option value="100">100</option>
+							</datalist>
+						
+							<div class="row" >
+								<div class="col-sm-3" id="selectColor" >
+									<input name="Identificador" id="Identificador" type="color" class="form-control" placeholder="Identificador" data-validation="required">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-12.text-right divBtnSave">
+									<input type="submit" id="bntGuardar" onclick="GuardarAlumnos()" class="btn btn-green contact-button" value="Guardar">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 text-left text-center-mobile">
+					</div>
+					<div class="col-sm-6 text-right text-center-mobile">
+						<div class="social">
+							<a href="https://www.facebook.com/pg/Unipolidgo-Software-261274550606325/photos/?ref=page_internal" class="facebook"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/unipolidgo?lang=es" class="twitter"><i class="fa fa-twitter"></i></a>
+							<a href="http://www.unipolidgo.edu.mx/sitio/" class="dribbble"><i class="fa fa-university"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div class="notification-box"><span>Guardando...</span></div>
+	<div class="mobile-nav">
+		<ul class="menu">
+			
+		</ul>
+	</div>
+
+
+<script src="js/Chart.js"></script>
+<script src="js/Chart.bundle.js"></script>
+<script>
+	new Chart(document.getElementById("myChart").getContext('2d'), {
+	 type: 'bar',
+	 data: {
+	   labels: ["Unidad 1","Unidad 2","Unidad 3","Unidad 4"],
+
+	   datasets: [{
+		 label: "Raymond",
+		 backgroundColor: ["#3e95cd","#3e95cd","#3e95cd","#3e95cd"],
+		 data: [80,90,70,30]
+	   },
+	   {
+		label: "Alfredo",
+		 backgroundColor: ["#7cc576","#7cc576","#7cc576","#7cc576"],
+		 data: [70,100,50,100]
+	   },
+	   {
+		label: "Daniela",
+		 backgroundColor: ["#dd69b1","#dd69b1","#dd69b1","#dd69b1"],
+		 data: [100,65,45,80]
+	   }
+	],
+	 },
+	 options: {
+	   title: {
+		 display: true,
+		 text: 'Promedios en Graficación y Multimedia',
+		 fontSize: 35
+	   },
+	   legend:{
+		   labels: {
+				fontSize: 25,
+				padding: 30,
+		   }
+	   },
+	   tooltips:{
+		bodyFontSize: 20,
+	   },
+	   scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+	 },
+ });
+
+ function GuardarAlumnos(){
+		 var obtenerNombre = document.getElementById("firstname").value;
+		 var obtenerColor = document.getElementById("Identificador").value;
+		 debugger
+		 console.log("nombre: "+obtenerNombre);
+		 console.log("color: "+obtenerColor);
+	 }
+
+// var ctx = document.getElementById('myChart').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ['Red', 'Blue', 'Yellow'],
+//         datasets: [{
+// 			label: '% de Calificación ', 
+// 			backgroundColor: [
+//                 '#3e95cd',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)'
+//             ],
+//             data: [19, 10, 5],
+//             borderWidth: 1
+//         }],
+//     },
+//     options: {
+// 		title: {
+// 			display: true,
+// 			text: 'Promedios en Graficación y Multimedia',
+// 			fontSize: 35
+// 	   },
+// 	   	legend: {
+// 		   	labels: {
+// 			fontSize: 20,
+// 			padding: 30,
+// 			}
+// 		},
+// 		tooltips:{
+// 			bodyFontSize: 20,
+// 	   },
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }]
+//         }
+//     }
+// });
+
+
+ </script>
+
+
+<script>
+	tippy('#selectColor',{
+		content: "Selecciona un Color de Identificador",
+	});
+	tippy('#grade1',{
+		content: "Calificación Unidad 1",
+	});
+	tippy('#grade2',{
+		content: "Calificación Unidad 2",
+	});
+	tippy('#grade3',{
+		content: "Calificación Unidad 3",
+	});
+	tippy('#grade4',{
+		content: "Calificación Unidad 4",
+	});
+</script>
+
+
+ <!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.onepagenav.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/jquery.flexdatalist.min.js"></script>
+<script src="js/jquery.form-validator.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
