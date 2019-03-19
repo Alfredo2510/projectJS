@@ -143,16 +143,13 @@
 							8°B, UNIPOLI</p>
 						</div>
 					</div>
-					<!-- <form action="php/newMail.php" method="post" class="mail-form"> -->
+
 					<form method="post" class="mail-form">
 						<div class="col-md-6">
 							<div class="row">
 								<div class="col-sm-12">
 									<input name="firstname" id="firstname" type="text" class="form-control" placeholder="Nombre y Apellido" data-validation="required">
 								</div>
-								<!-- <div class="col-sm-6">
-									<input name="email" type="text" class="form-control" placeholder="Email" data-validation="email">
-								</div> -->
 							</div>
 
 							<div class="row">
@@ -280,9 +277,15 @@
  function GuardarAlumnos(){
 		 var obtenerNombre = document.getElementById("firstname").value;
 		 var obtenerColor = document.getElementById("Identificador").value;
-		 debugger
+		 var grade1 = document.getElementById("grade1").value;
+		 var grade2 = document.getElementById("grade2").value;
+		 var grade3 = document.getElementById("grade3").value;
+		 var grade4 = document.getElementById("grade4").value;
+
 		 console.log("nombre: "+obtenerNombre);
 		 console.log("color: "+obtenerColor);
+		 console.log("califas 1: " + grade1 +" Califas 2: "+ grade2 +" Califas 3: "+ grade3 +" Califas 4: "+ grade4)
+		 console.log(this.data.length);
 	 }
 
 // var ctx = document.getElementById('myChart').getContext('2d');
